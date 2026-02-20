@@ -554,7 +554,7 @@
 
 .lm-score-left {
   flex: 1;
-  min-width: 200px;
+  min-width: 0;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
@@ -646,7 +646,7 @@
 
 /* ── Partnership Card ── */
 .lm-pship-card {
-  min-width: 200px;
+  min-width: 0;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
@@ -1084,11 +1084,11 @@
 }
 
 .lm-table td.col-name {
-  min-width: 100px;
+  min-width: 80px;
 }
 
 .lm-table td.col-dismissal {
-  min-width: 100px;
+  min-width: 70px;
 }
 
 .lm-table tbody tr:last-child td {
@@ -1556,12 +1556,18 @@
 }
 
 /* ── Responsive ── */
+
+/* Tablets and small desktops */
 @media (max-width: 600px) {
   .lm-score-header {
     flex-direction: column;
   }
 
   .lm-score-left {
+    min-width: auto;
+  }
+
+  .lm-pship-card {
     min-width: auto;
   }
 
@@ -1573,8 +1579,8 @@
     font-size: 0.85rem;
   }
 
-  .lm-pship-card {
-    min-width: auto;
+  .lm-rate-row {
+    margin-left: 0;
   }
 
   .lm-table th,
@@ -1587,16 +1593,8 @@
   }
 
   .lm-table td.col-dismissal {
-    min-width: 70px;
+    min-width: 60px;
     font-size: 0.7rem;
-  }
-
-  .lm-run-grid {
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  .lm-action-row {
-    grid-template-columns: repeat(5, 1fr);
   }
 
   .lm-act-btn {
@@ -1605,7 +1603,7 @@
   }
 
   .lm-act-icon {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 
   .lm-act-text {
@@ -1616,20 +1614,12 @@
     gap: 4px;
   }
 
-  .lm-ib-row {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .lm-ib-score {
     font-size: 1.5rem;
   }
 
   .lm-ib-target-value {
     font-size: 1.75rem;
-  }
-
-  .lm-rate-row {
-    margin-left: 0;
   }
 
   .lm-result-card {
@@ -1662,15 +1652,29 @@
   }
 }
 
-@media (max-width: 375px) {
+/* Most phones (390px - 480px) */
+@media (max-width: 480px) {
+  .lm {
+    overflow-x: hidden;
+  }
+
   .lm-hero {
-    padding: var(--spacing-md) var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .lm-match-title {
+    font-size: 1.2rem;
+  }
+
+  .lm-match-meta {
+    font-size: 0.75rem;
   }
 
   .lm-score-header,
   .lm-controls,
   .lm-over-card,
   .lm-card,
+  .lm-swap-row,
   .lm-innings-break,
   .lm-result-card,
   .lm-new-match-wrap {
@@ -1678,16 +1682,12 @@
     margin-right: var(--spacing-sm);
   }
 
-  .lm-match-title {
-    font-size: 1.15rem;
-  }
-
-  .lm-match-meta {
-    font-size: 0.7rem;
+  .lm-score-left {
+    padding: var(--spacing-sm) var(--spacing-md);
   }
 
   .lm-score-runs {
-    font-size: 1.75rem;
+    font-size: 1.85rem;
   }
 
   .lm-score-overs {
@@ -1700,34 +1700,89 @@
     font-size: 0.55rem;
   }
 
+  .lm-team-name-top {
+    font-size: 0.6rem;
+  }
+
+  .lm-pship-card {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .lm-pship-name {
+    font-size: 0.7rem;
+  }
+
+  .lm-pship-value {
+    font-size: 1.25rem;
+  }
+
+  .lm-controls {
+    padding: var(--spacing-sm);
+  }
+
   .lm-run-btn {
-    padding: 8px 0;
+    padding: 10px 0;
     font-size: 1.1rem;
+  }
+
+  /* Hide action text on mobile - show icons only */
+  .lm-act-text {
+    display: none;
+  }
+
+  .lm-act-btn {
+    padding: 12px 6px;
+    gap: 0;
+  }
+
+  .lm-act-icon {
+    font-size: 1rem;
   }
 
   .lm-ball {
     width: 32px;
     height: 32px;
-    font-size: 0.6rem;
+    font-size: 0.65rem;
+  }
+
+  .lm-table {
+    font-size: 0.75rem;
   }
 
   .lm-table th,
   .lm-table td {
-    padding: 6px 4px;
-    font-size: 0.7rem;
-  }
-
-  .lm-table td.col-name {
-    min-width: 60px;
-  }
-
-  .lm-table td.col-dismissal {
-    min-width: 60px;
-    font-size: 0.65rem;
+    padding: 7px 4px;
   }
 
   .lm-table th {
     font-size: 0.55rem;
+    letter-spacing: 0.5px;
+  }
+
+  .lm-table td.col-name {
+    min-width: 55px;
+    font-size: 0.7rem;
+  }
+
+  .lm-table td.col-dismissal {
+    min-width: 50px;
+    font-size: 0.6rem;
+  }
+
+  .lm-card-header {
+    padding: var(--spacing-sm) var(--spacing-md);
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+  }
+
+  .lm-card-title {
+    font-size: 0.8rem;
+  }
+
+  .lm-sc-tab {
+    padding: 3px 8px;
+    font-size: 0.6rem;
+    max-width: 80px;
   }
 
   .lm-summary-row,
@@ -1736,18 +1791,25 @@
     padding-right: var(--spacing-md);
   }
 
+  .lm-summary-value {
+    font-size: 0.75rem;
+  }
+
+  .lm-summary-detail {
+    font-size: 0.65rem;
+  }
+
+  .lm-total-value {
+    font-size: 1.5rem;
+  }
+
   .lm-fow {
-    padding-left: var(--spacing-md);
-    padding-right: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md);
   }
 
   .lm-fow-badge {
     font-size: 0.6rem;
     padding: 3px 6px;
-  }
-
-  .lm-pship-value {
-    font-size: 1.25rem;
   }
 
   .lm-nav {
@@ -1758,14 +1820,12 @@
     font-size: 0.85rem;
   }
 
-  .lm-nav-link {
-    font-size: 0.7rem;
+  .lm-nav-actions {
+    gap: var(--spacing-md);
   }
 
-  .lm-sc-tab {
-    padding: 3px 8px;
-    font-size: 0.6rem;
-    max-width: 80px;
+  .lm-nav-link {
+    font-size: 0.7rem;
   }
 
   .lm-result-act-btn {
@@ -1778,6 +1838,14 @@
     font-size: 1rem;
   }
 
+  .lm-mom-name {
+    font-size: 1rem;
+  }
+
+  .lm-mom-stats {
+    font-size: 0.75rem;
+  }
+
   .lm-chase-info {
     font-size: 0.8rem;
   }
@@ -1785,8 +1853,130 @@
   .lm-completed-badge {
     font-size: 0.6rem;
   }
+
+  .lm-nb-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .lm-nb-btn {
+    padding: 10px 4px;
+  }
+
+  .lm-nb-val {
+    font-size: 1.2rem;
+  }
+
+  .lm-pship-row-label {
+    font-size: 0.65rem;
+  }
+
+  .lm-pship-row-value {
+    font-size: 0.7rem;
+  }
 }
 
+/* Small phones (375px and below) */
+@media (max-width: 375px) {
+  .lm-hero {
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .lm-match-title {
+    font-size: 1.05rem;
+  }
+
+  .lm-score-runs {
+    font-size: 1.6rem;
+  }
+
+  .lm-run-grid {
+    gap: 4px;
+  }
+
+  .lm-run-btn {
+    padding: 8px 0;
+    font-size: 1rem;
+  }
+
+  .lm-action-row {
+    gap: 4px;
+  }
+
+  .lm-act-btn {
+    padding: 10px 4px;
+  }
+
+  .lm-table th,
+  .lm-table td {
+    padding: 5px 3px;
+    font-size: 0.65rem;
+  }
+
+  .lm-table td.col-name {
+    min-width: 45px;
+  }
+
+  .lm-table td.col-dismissal {
+    min-width: 40px;
+    font-size: 0.55rem;
+  }
+
+  .lm-table th {
+    font-size: 0.5rem;
+  }
+
+  .lm-sc-tab {
+    padding: 2px 6px;
+    font-size: 0.55rem;
+    max-width: 70px;
+  }
+
+  .lm-total-value {
+    font-size: 1.3rem;
+  }
+
+  .lm-ib-score {
+    font-size: 1.25rem;
+  }
+
+  .lm-ib-target-value {
+    font-size: 1.5rem;
+  }
+
+  .lm-hero-target {
+    padding: 3px 8px;
+  }
+
+  .lm-hero-target-value {
+    font-size: 0.85rem;
+  }
+
+  .lm-hero-target-label {
+    font-size: 0.5rem;
+  }
+
+  .lm-rate-chip {
+    padding: 3px 6px;
+    font-size: 0.6rem;
+  }
+
+  .lm-rate-chip strong {
+    font-size: 0.7rem;
+  }
+
+  .lm-result-actions {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .lm-result-act-btn {
+    min-width: 50px;
+    padding: 6px 8px;
+  }
+}
+
+/* Desktop */
 @media (min-width: 768px) {
   .lm {
     max-width: 960px;

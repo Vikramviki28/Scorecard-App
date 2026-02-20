@@ -117,8 +117,10 @@
 @media (max-width: 480px) {
   .quick-match-setup { padding: var(--spacing-sm); }
   .quick-header h2 { font-size: 1.25rem; }
+  .quick-header p { font-size: 0.8rem; }
   .overs-btn { padding: var(--spacing-sm); font-size: 0.875rem; }
-  .team-select-btn { padding: var(--spacing-sm); font-size: 0.75rem; }
+  .team-select-btn { padding: var(--spacing-sm); font-size: 0.8rem; }
+  .form-section { margin-bottom: var(--spacing-md); padding-bottom: var(--spacing-md); }
 }
 
 @media (max-width: 375px) {
@@ -138,6 +140,10 @@
   }
 
   .section-title {
+    font-size: 0.7rem;
+  }
+
+  .error-msg {
     font-size: 0.7rem;
   }
 }

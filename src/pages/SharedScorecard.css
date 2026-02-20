@@ -271,11 +271,11 @@
 }
 
 .ss-table td.col-name {
-  min-width: 90px;
+  min-width: 80px;
 }
 
 .ss-table td.col-dismissal {
-  min-width: 90px;
+  min-width: 70px;
 }
 
 .ss-table tbody tr:last-child td {
@@ -493,11 +493,11 @@
   }
 
   .ss-table td.col-name {
-    min-width: 70px;
+    min-width: 60px;
   }
 
   .ss-table td.col-dismissal {
-    min-width: 70px;
+    min-width: 50px;
     font-size: 0.7rem;
   }
 
@@ -526,9 +526,22 @@
   }
 }
 
-@media (max-width: 375px) {
+/* Most phones */
+@media (max-width: 480px) {
+  .ss {
+    overflow-x: hidden;
+  }
+
   .ss-hero {
-    padding: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .ss-match-title {
+    font-size: 1.15rem;
+  }
+
+  .ss-match-meta {
+    font-size: 0.7rem;
   }
 
   .ss-result-card,
@@ -537,14 +550,6 @@
   .ss-footer {
     margin-left: var(--spacing-sm);
     margin-right: var(--spacing-sm);
-  }
-
-  .ss-match-title {
-    font-size: 1.1rem;
-  }
-
-  .ss-match-meta {
-    font-size: 0.7rem;
   }
 
   .ss-nav {
@@ -560,23 +565,44 @@
     padding: 2px 8px;
   }
 
+  .ss-table {
+    font-size: 0.75rem;
+  }
+
   .ss-table th,
   .ss-table td {
-    padding: 6px 4px;
-    font-size: 0.7rem;
-  }
-
-  .ss-table td.col-name {
-    min-width: 60px;
-  }
-
-  .ss-table td.col-dismissal {
-    min-width: 60px;
-    font-size: 0.65rem;
+    padding: 7px 4px;
   }
 
   .ss-table th {
     font-size: 0.55rem;
+    letter-spacing: 0.5px;
+  }
+
+  .ss-table td.col-name {
+    min-width: 50px;
+    font-size: 0.7rem;
+  }
+
+  .ss-table td.col-dismissal {
+    min-width: 45px;
+    font-size: 0.6rem;
+  }
+
+  .ss-card-header {
+    padding: var(--spacing-sm) var(--spacing-md);
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+  }
+
+  .ss-card-title {
+    font-size: 0.8rem;
+  }
+
+  .ss-tab {
+    padding: 3px 8px;
+    font-size: 0.6rem;
+    max-width: 80px;
   }
 
   .ss-innings-summary {
@@ -595,29 +621,22 @@
     font-size: 1rem;
   }
 
-  .ss-tab {
-    padding: 3px 8px;
-    font-size: 0.6rem;
-    max-width: 80px;
-  }
-
-  .ss-card-header {
-    padding: var(--spacing-sm) var(--spacing-md);
-  }
-
-  .ss-card-title {
-    font-size: 0.8rem;
-  }
-
   .ss-summary-row,
   .ss-total-row {
     padding-left: var(--spacing-md);
     padding-right: var(--spacing-md);
   }
 
+  .ss-summary-value {
+    font-size: 0.75rem;
+  }
+
+  .ss-summary-detail {
+    font-size: 0.65rem;
+  }
+
   .ss-fow {
-    padding-left: var(--spacing-md);
-    padding-right: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md);
   }
 
   .ss-fow-badge {
@@ -633,9 +652,58 @@
     font-size: 0.75rem;
   }
 
+  .ss-result-card {
+    padding: var(--spacing-md);
+  }
+
   .ss-cta-btn {
     padding: 10px 24px;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .ss-total-value {
+    font-size: 1.3rem;
+  }
+
+  .ss-error-card {
+    margin: var(--spacing-lg) var(--spacing-sm);
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+}
+
+/* Small phones */
+@media (max-width: 375px) {
+  .ss-hero {
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .ss-match-title {
+    font-size: 1rem;
+  }
+
+  .ss-table th,
+  .ss-table td {
+    padding: 5px 3px;
+    font-size: 0.65rem;
+  }
+
+  .ss-table td.col-name {
+    min-width: 40px;
+  }
+
+  .ss-table td.col-dismissal {
+    min-width: 35px;
+    font-size: 0.55rem;
+  }
+
+  .ss-table th {
+    font-size: 0.5rem;
+  }
+
+  .ss-tab {
+    padding: 2px 6px;
+    font-size: 0.55rem;
+    max-width: 70px;
   }
 }
 

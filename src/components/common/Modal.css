@@ -50,9 +50,13 @@
   padding: var(--spacing-lg);
 }
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .modal-overlay {
     padding: var(--spacing-sm);
+  }
+
+  .modal-content {
+    max-width: 95vw;
   }
 
   .modal-header {
@@ -62,5 +66,15 @@
 
   .modal-body {
     padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: 375px) {
+  .modal-overlay {
+    padding: 6px;
+  }
+
+  .modal-body {
+    padding: var(--spacing-sm);
   }
 }
