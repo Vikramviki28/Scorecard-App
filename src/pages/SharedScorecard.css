@@ -1,0 +1,532 @@
+/* ═══════════════════════════════════════════
+   SHARED SCORECARD - Read-only view
+   ═══════════════════════════════════════════ */
+
+.ss {
+  min-height: 100vh;
+  background: var(--bg-body);
+  color: var(--text-primary);
+  padding-bottom: var(--spacing-2xl);
+}
+
+/* ── Navbar ── */
+.ss-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.ss-nav-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  cursor: pointer;
+}
+
+.ss-nav-icon {
+  font-size: 1.25rem;
+}
+
+.ss-nav-title {
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.ss-shared-badge {
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: var(--color-primary-light, #60a5fa);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 3px 10px;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 12px;
+  background: rgba(59, 130, 246, 0.1);
+}
+
+/* ── Hero ── */
+.ss-hero {
+  padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-md);
+  text-align: center;
+}
+
+.ss-match-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.ss-match-meta {
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+}
+
+/* ── Result Card ── */
+.ss-result-card {
+  margin: 0 var(--spacing-lg) var(--spacing-md);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(59, 130, 246, 0.08));
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  text-align: center;
+}
+
+.ss-trophy {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.ss-result-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--color-secondary-light, #34d399);
+  margin-bottom: 4px;
+}
+
+.ss-result-margin {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.ss-mom {
+  padding: var(--spacing-md) 0 0;
+  margin-top: var(--spacing-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ss-mom-label {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--color-warning, #f59e0b);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 6px;
+}
+
+.ss-mom-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.ss-mom-stats {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* ── Innings Score Summary ── */
+.ss-innings-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 0 var(--spacing-lg) var(--spacing-md);
+}
+
+.ss-inn-score-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  text-align: center;
+}
+
+.ss-inn-team {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.ss-inn-score {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+/* ── Card ── */
+.ss-card {
+  margin: 0 var(--spacing-lg) var(--spacing-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.ss-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--bg-card-header);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.ss-card-title {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.ss-card-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  background: var(--bg-tertiary);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Tabs ── */
+.ss-tabs {
+  display: flex;
+  gap: 3px;
+  background: var(--bg-tertiary);
+  padding: 3px;
+  border-radius: var(--radius-full);
+}
+
+.ss-tab {
+  padding: 4px 12px;
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ss-tab.active {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* ── Table ── */
+.ss-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ss-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.ss-table thead tr {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.ss-table th {
+  padding: 10px 12px;
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.ss-table th.col-name,
+.ss-table th.col-dismissal {
+  text-align: left;
+}
+
+.ss-table td {
+  padding: 12px;
+  text-align: center;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.ss-table td.col-name,
+.ss-table td.col-dismissal {
+  text-align: left;
+}
+
+.ss-table td.col-name {
+  min-width: 90px;
+}
+
+.ss-table td.col-dismissal {
+  min-width: 90px;
+}
+
+.ss-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.ss-table .name-normal {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.ss-table .name-striker {
+  color: var(--color-primary-light);
+  font-weight: 700;
+}
+
+.ss-table .not-out {
+  color: var(--color-secondary);
+  font-style: italic;
+  font-size: 0.75rem;
+}
+
+.ss-table .dismissed {
+  color: var(--text-tertiary);
+  font-size: 0.75rem;
+}
+
+.ss-table .col-stat {
+  font-variant-numeric: tabular-nums;
+}
+
+.ss-table .col-stat.bold {
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.ss-table .wicket-count {
+  color: var(--color-primary-light);
+  font-weight: 900;
+}
+
+/* ── Extras & Total ── */
+.ss-summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px var(--spacing-lg);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.ss-summary-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.ss-summary-value {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.ss-summary-detail {
+  font-weight: 500;
+  color: var(--text-tertiary);
+  font-size: 0.75rem;
+}
+
+.ss-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-card-header);
+}
+
+.ss-total-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ss-total-label {
+  font-size: 0.7rem;
+  font-weight: 900;
+  color: var(--color-primary-light);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.ss-total-detail {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-tertiary);
+}
+
+.ss-total-value {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--color-primary-light);
+}
+
+/* ── Fall of Wickets ── */
+.ss-fow {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.ss-fow-title {
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: var(--text-tertiary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-sm);
+}
+
+.ss-fow-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.ss-fow-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.ss-fow-num {
+  font-weight: 800;
+  color: var(--color-primary-light);
+}
+
+/* ── Footer ── */
+.ss-footer {
+  text-align: center;
+  padding: var(--spacing-xl) var(--spacing-lg);
+  border-top: 1px solid var(--border-subtle);
+  margin: var(--spacing-lg) var(--spacing-lg) 0;
+}
+
+.ss-footer p {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  margin-bottom: var(--spacing-md);
+}
+
+.ss-cta-btn {
+  padding: 12px 32px;
+  background: var(--color-primary, #3b82f6);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.ss-cta-btn:active {
+  transform: scale(0.97);
+  background: var(--color-primary-light, #60a5fa);
+}
+
+/* ── Error State ── */
+.ss-error-card {
+  margin: var(--spacing-xl) var(--spacing-lg);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  text-align: center;
+}
+
+.ss-error-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.ss-error-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.ss-error-text {
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* ── Loading ── */
+.ss-loading {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  color: var(--text-tertiary);
+  font-size: 0.9rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .ss-table th,
+  .ss-table td {
+    padding: 8px 6px;
+  }
+
+  .ss-table td.col-name {
+    min-width: 80px;
+  }
+
+  .ss-table td.col-dismissal {
+    min-width: 80px;
+    font-size: 0.7rem;
+  }
+
+  .ss-fow-list {
+    gap: 4px;
+  }
+}
+
+@media (max-width: 375px) {
+  .ss-hero {
+    padding: var(--spacing-md);
+  }
+
+  .ss-result-card,
+  .ss-innings-summary,
+  .ss-card,
+  .ss-footer {
+    margin-left: var(--spacing-md);
+    margin-right: var(--spacing-md);
+  }
+
+  .ss-match-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .ss {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}

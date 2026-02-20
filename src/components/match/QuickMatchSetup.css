@@ -1,0 +1,122 @@
+.quick-match-setup {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+}
+
+.quick-header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.quick-header h2 {
+  font-size: 1.5rem;
+  color: var(--color-primary-light);
+  margin-bottom: var(--spacing-xs);
+}
+
+.quick-header p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.form-section {
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.form-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.section-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--spacing-md);
+}
+
+.overs-quick-select {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.overs-btn {
+  padding: var(--spacing-sm);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--text-primary);
+}
+
+.overs-btn:hover {
+  border-color: var(--color-primary);
+}
+
+.overs-btn.active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.team-select-btns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-sm);
+}
+
+.team-select-btn {
+  padding: var(--spacing-md);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  word-break: break-word;
+  color: var(--text-primary);
+}
+
+.team-select-btn:hover:not(:disabled) {
+  border-color: var(--color-primary);
+}
+
+.team-select-btn.active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.team-select-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.error-msg {
+  color: var(--color-danger);
+  font-size: 0.75rem;
+  margin-bottom: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: rgba(239, 68, 68, 0.1);
+  border-radius: var(--radius-sm);
+}
+
+@media (max-width: 480px) {
+  .quick-match-setup { padding: var(--spacing-sm); }
+  .quick-header h2 { font-size: 1.25rem; }
+  .overs-btn { padding: var(--spacing-sm); font-size: 0.875rem; }
+  .team-select-btn { padding: var(--spacing-sm); font-size: 0.75rem; }
+}
