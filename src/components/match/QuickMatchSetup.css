@@ -120,3 +120,24 @@
   .overs-btn { padding: var(--spacing-sm); font-size: 0.875rem; }
   .team-select-btn { padding: var(--spacing-sm); font-size: 0.75rem; }
 }
+
+@media (max-width: 375px) {
+  .overs-quick-select {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .overs-btn {
+    padding: 8px 4px;
+    font-size: 0.8rem;
+  }
+
+  .team-select-btn {
+    padding: 10px 8px;
+    font-size: 0.7rem;
+  }
+
+  .section-title {
+    font-size: 0.7rem;
+  }
+}

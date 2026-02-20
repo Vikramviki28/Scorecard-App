@@ -49,3 +49,18 @@
 .modal-body {
   padding: var(--spacing-lg);
 }
+
+@media (max-width: 375px) {
+  .modal-overlay {
+    padding: var(--spacing-sm);
+  }
+
+  .modal-header {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.9rem;
+  }
+
+  .modal-body {
+    padding: var(--spacing-md);
+  }
+}

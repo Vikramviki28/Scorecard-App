@@ -1561,6 +1561,10 @@
     flex-direction: column;
   }
 
+  .lm-score-left {
+    min-width: auto;
+  }
+
   .lm-score-runs {
     font-size: 2rem;
   }
@@ -1579,11 +1583,11 @@
   }
 
   .lm-table td.col-name {
-    min-width: 80px;
+    min-width: 70px;
   }
 
   .lm-table td.col-dismissal {
-    min-width: 80px;
+    min-width: 70px;
     font-size: 0.7rem;
   }
 
@@ -1623,28 +1627,71 @@
   .lm-ib-target-value {
     font-size: 1.75rem;
   }
+
+  .lm-rate-row {
+    margin-left: 0;
+  }
+
+  .lm-result-card {
+    margin-left: var(--spacing-md);
+    margin-right: var(--spacing-md);
+    padding: var(--spacing-lg);
+  }
+
+  .lm-result-trophy {
+    font-size: 2.5rem;
+  }
+
+  .lm-result-title {
+    font-size: 1.25rem;
+  }
+
+  .lm-result-actions {
+    gap: 6px;
+  }
+
+  .lm-result-act-btn {
+    padding: 8px 12px;
+    min-width: 60px;
+    font-size: 0.6rem;
+  }
+
+  .lm-new-match-wrap {
+    margin-left: var(--spacing-md);
+    margin-right: var(--spacing-md);
+  }
 }
 
 @media (max-width: 375px) {
   .lm-hero {
-    padding: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-sm);
   }
 
   .lm-score-header,
   .lm-controls,
   .lm-over-card,
   .lm-card,
-  .lm-innings-break {
-    margin-left: var(--spacing-md);
-    margin-right: var(--spacing-md);
+  .lm-innings-break,
+  .lm-result-card,
+  .lm-new-match-wrap {
+    margin-left: var(--spacing-sm);
+    margin-right: var(--spacing-sm);
   }
 
   .lm-match-title {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
+  }
+
+  .lm-match-meta {
+    font-size: 0.7rem;
   }
 
   .lm-score-runs {
     font-size: 1.75rem;
+  }
+
+  .lm-score-overs {
+    font-size: 0.8rem;
   }
 
   .lm-team-badge {
@@ -1659,8 +1706,83 @@
   }
 
   .lm-ball {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
+    font-size: 0.6rem;
+  }
+
+  .lm-table th,
+  .lm-table td {
+    padding: 6px 4px;
+    font-size: 0.7rem;
+  }
+
+  .lm-table td.col-name {
+    min-width: 60px;
+  }
+
+  .lm-table td.col-dismissal {
+    min-width: 60px;
+    font-size: 0.65rem;
+  }
+
+  .lm-table th {
+    font-size: 0.55rem;
+  }
+
+  .lm-summary-row,
+  .lm-total-row {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+  }
+
+  .lm-fow {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+  }
+
+  .lm-fow-badge {
+    font-size: 0.6rem;
+    padding: 3px 6px;
+  }
+
+  .lm-pship-value {
+    font-size: 1.25rem;
+  }
+
+  .lm-nav {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .lm-nav-title {
+    font-size: 0.85rem;
+  }
+
+  .lm-nav-link {
+    font-size: 0.7rem;
+  }
+
+  .lm-sc-tab {
+    padding: 3px 8px;
+    font-size: 0.6rem;
+    max-width: 80px;
+  }
+
+  .lm-result-act-btn {
+    padding: 8px 10px;
+    min-width: 55px;
+    font-size: 0.55rem;
+  }
+
+  .lm-result-act-icon {
+    font-size: 1rem;
+  }
+
+  .lm-chase-info {
+    font-size: 0.8rem;
+  }
+
+  .lm-completed-badge {
     font-size: 0.6rem;
   }
 }

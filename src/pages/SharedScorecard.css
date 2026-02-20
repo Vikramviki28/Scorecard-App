@@ -493,34 +493,149 @@
   }
 
   .ss-table td.col-name {
-    min-width: 80px;
+    min-width: 70px;
   }
 
   .ss-table td.col-dismissal {
-    min-width: 80px;
+    min-width: 70px;
     font-size: 0.7rem;
   }
 
   .ss-fow-list {
     gap: 4px;
   }
+
+  .ss-result-card {
+    padding: var(--spacing-lg);
+  }
+
+  .ss-trophy {
+    font-size: 2rem;
+  }
+
+  .ss-result-title {
+    font-size: 1.25rem;
+  }
+
+  .ss-inn-score {
+    font-size: 1.1rem;
+  }
+
+  .ss-total-value {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 375px) {
   .ss-hero {
-    padding: var(--spacing-md);
+    padding: var(--spacing-sm);
   }
 
   .ss-result-card,
   .ss-innings-summary,
   .ss-card,
   .ss-footer {
-    margin-left: var(--spacing-md);
-    margin-right: var(--spacing-md);
+    margin-left: var(--spacing-sm);
+    margin-right: var(--spacing-sm);
   }
 
   .ss-match-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .ss-match-meta {
+    font-size: 0.7rem;
+  }
+
+  .ss-nav {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .ss-nav-title {
+    font-size: 0.85rem;
+  }
+
+  .ss-shared-badge {
+    font-size: 0.5rem;
+    padding: 2px 8px;
+  }
+
+  .ss-table th,
+  .ss-table td {
+    padding: 6px 4px;
+    font-size: 0.7rem;
+  }
+
+  .ss-table td.col-name {
+    min-width: 60px;
+  }
+
+  .ss-table td.col-dismissal {
+    min-width: 60px;
+    font-size: 0.65rem;
+  }
+
+  .ss-table th {
+    font-size: 0.55rem;
+  }
+
+  .ss-innings-summary {
+    gap: 6px;
+  }
+
+  .ss-inn-score-card {
+    padding: var(--spacing-sm);
+  }
+
+  .ss-inn-team {
+    font-size: 0.6rem;
+  }
+
+  .ss-inn-score {
+    font-size: 1rem;
+  }
+
+  .ss-tab {
+    padding: 3px 8px;
+    font-size: 0.6rem;
+    max-width: 80px;
+  }
+
+  .ss-card-header {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .ss-card-title {
+    font-size: 0.8rem;
+  }
+
+  .ss-summary-row,
+  .ss-total-row {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+  }
+
+  .ss-fow {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+  }
+
+  .ss-fow-badge {
+    font-size: 0.6rem;
+    padding: 3px 6px;
+  }
+
+  .ss-mom-name {
+    font-size: 1rem;
+  }
+
+  .ss-mom-stats {
+    font-size: 0.75rem;
+  }
+
+  .ss-cta-btn {
+    padding: 10px 24px;
+    font-size: 0.8rem;
   }
 }
 
